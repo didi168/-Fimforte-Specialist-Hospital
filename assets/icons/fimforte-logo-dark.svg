@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 68" width="100%" height="100%" fill="none">
+  <defs>
+    <filter id="dark-tile-shadow" x="-10%" y="-10%" width="130%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Left Emblem Tile (Crisp White Tile with Red Caduceus) -->
+  <g transform="translate(4, 4)">
+    <rect x="0" y="0" width="60" height="60" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#dark-tile-shadow)"/>
+    
+    <!-- Red Caduceus Medical Emblem -->
+    <g transform="translate(14, 8) scale(0.68)">
+      <circle cx="23.5" cy="4" r="3.5" fill="#DC2626" />
+      <path d="M22.5 7 L24.5 7 L24.5 68 L22.5 68 Z" fill="#DC2626" />
+      <path d="M20.5 67 L26.5 67 L23.5 72 Z" fill="#DC2626" />
+
+      <!-- Left Wing -->
+      <path d="M22 13 C 14 7, 2 8, 1 18 C 0 24, 7 28, 12 28 C 17 28, 22 22, 22 22 C 22 22, 16 22, 11 25 C 6 25, 4 21, 5 18 C 6 13, 14 12, 22 15 Z" fill="#DC2626" />
+      <path d="M19 14 C 13 11, 6 12, 4 17 C 7 15, 13 15, 19 18 Z" fill="#EF4444" />
+
+      <!-- Right Wing -->
+      <path d="M25 13 C 33 7, 45 8, 46 18 C 47 24, 40 28, 35 28 C 30 28, 25 22, 25 22 C 25 22, 31 22, 36 25 C 41 25, 43 21, 42 18 C 41 13, 33 12, 25 15 Z" fill="#DC2626" />
+      <path d="M28 14 C 34 11, 41 12, 43 17 C 40 15, 34 15, 28 18 Z" fill="#EF4444" />
+
+      <!-- Entwined Serpents -->
+      <path d="M23 20 C 13 22, 10 30, 18 36 C 22 39, 25 43, 25 43 C 25 43, 21 37, 16 34 C 11 31, 14 24, 23 23 Z" fill="#B91C1C" />
+      <path d="M24 20 C 34 22, 37 30, 29 36 C 25 39, 22 43, 22 43 C 22 43, 26 37, 31 34 C 36 31, 33 24, 24 23 Z" fill="#DC2626" />
+
+      <path d="M25 43 C 28 47, 32 52, 29 57 C 26 62, 23 64, 23 64 C 23 64, 26 60, 28 56 C 30 52, 26 48, 23 44 Z" fill="#B91C1C" />
+      <path d="M22 43 C 19 47, 15 52, 18 57 C 21 62, 24 64, 24 64 C 24 64, 21 60, 19 56 C 17 52, 21 48, 24 44 Z" fill="#DC2626" />
+    </g>
+  </g>
+
+  <!-- Typography Brand Text optimized for Dark Footer -->
+  <g transform="translate(76, 36)">
+    <!-- Primary Wordmark: FIMFORTE in Crisp Brilliant White -->
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="25" font-weight="900" letter-spacing="1.5" fill="#FFFFFF">FIMFORTE</text>
+    
+    <!-- Secondary Subtitle: SPECIALIST HOSPITAL LTD. in Crimson -->
+    <text x="0" y="19" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="9.5" font-weight="800" letter-spacing="2.6" fill="#F87171">SPECIALIST HOSPITAL LTD.</text>
+  </g>
+</svg>
