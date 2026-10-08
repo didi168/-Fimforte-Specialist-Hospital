@@ -356,6 +356,7 @@ Open your browser at **`http://localhost:8080`**.
 | 💬 **WhatsApp Triage Desk** | [**Chat on WhatsApp**](https://wa.me/2347016357096) | Instant Response |
 | ✉️ **Official Email** | [**fimfortehospital@gmail.com**](mailto:fimfortehospital@gmail.com) | Clinical Inquiries |
 | 🌐 **Official Website** | [**fimfortehospital.ng**](https://fimfortehospital.ng) | Global Portal |
+| 🗺️ **Google Maps & Reviews** | [**maps.app.goo.gl/ZCX8c7GsXTRh78TD8**](https://maps.app.goo.gl/ZCX8c7GsXTRh78TD8) | Verified Profile |
 
 </div>
 

@@ -26,14 +26,14 @@
   <link rel="manifest" href="site.webmanifest">
   
   <!-- Favicon & Touch Icon (Google Search & Multi-Device Optimized) -->
-  <link rel="icon" type="image/svg+xml" href="assets/icons/fimforte-favicon.svg">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/favicon-512x512.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="mask-icon" href="assets/icons/fimforte-favicon.svg" color="#DC2626">
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/fimforte-favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/icons/favicon-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="mask-icon" href="/assets/icons/fimforte-favicon.svg" color="#DC2626">
 
   <!-- Core Web Vitals: Preload Critical LCP Hero Image -->
   <link rel="preload" as="image" href="assets/images/hero-doctor.jpg" fetchpriority="high">
@@ -795,8 +795,12 @@
               Real verified experiences from mothers, surgical patients, and families across Port Harcourt who experienced prompt emergency attention, spotless wards, and compassionate clinical care.
             </p>
           </div>
-          <div>
-            <a href="submit-testimonial.html" class="btn btn-primary" id="btnShareStoryHeader" style="white-space: nowrap;">
+          <div class="testimonials-header-actions">
+            <a href="https://maps.app.goo.gl/ZCX8c7GsXTRh78TD8" target="_blank" rel="noopener noreferrer" class="btn btn-google-review" id="btnGoogleReviewHeader" title="Write a verified review for Fimforte Specialist Hospital on Google Maps">
+              <i class="fa-brands fa-google" aria-hidden="true"></i>
+              <span>Review on Google</span>
+            </a>
+            <a href="submit-testimonial.html" class="btn btn-primary" id="btnShareStoryHeader">
               <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
               <span>Share Your Story</span>
             </a>
@@ -918,10 +922,16 @@
             <h3>Have you or a loved one been cared for at Fimforte?</h3>
             <p>Your honest review, recovery photo, or short video gives reassurance to families across Port Harcourt facing health decisions.</p>
           </div>
-          <a href="submit-testimonial.html" class="btn btn-secondary">
-            <i class="fa-solid fa-camera"></i>
-            <span>Submit Your Story & Photos</span>
-          </a>
+          <div class="testimonial-cta-actions">
+            <a href="https://maps.app.goo.gl/ZCX8c7GsXTRh78TD8" target="_blank" rel="noopener noreferrer" class="btn btn-google-review" title="Rate Fimforte on Google Maps">
+              <i class="fa-brands fa-google" aria-hidden="true"></i>
+              <span>Review on Google</span>
+            </a>
+            <a href="submit-testimonial.html" class="btn btn-secondary">
+              <i class="fa-solid fa-camera" aria-hidden="true"></i>
+              <span>Submit Your Story & Photos</span>
+            </a>
+          </div>
         </div>
 
       </div>
@@ -1205,7 +1215,7 @@
           <div class="footer-social-links">
             <a href="tel:+2347016357096" class="footer-social-btn" title="Emergency Phone" aria-label="Call emergency hotline"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
             <a href="mailto:fimfortehospital@gmail.com" class="footer-social-btn" title="Email" aria-label="Send email to hospital"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-            <a href="https://maps.google.com/?q=Bloombreed+School+Road+Opposite+NTA+Mgbuoba+Port+Harcourt" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Location Map" aria-label="Open hospital location on Google Maps"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></a>
+            <a href="https://maps.app.goo.gl/ZCX8c7GsXTRh78TD8" target="_blank" rel="noopener noreferrer" class="footer-social-btn" title="Google Maps & Reviews" aria-label="Open Fimforte Specialist Hospital on Google Maps and Reviews"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></a>
           </div>
         </div>
 
@@ -1232,6 +1242,7 @@
             <li><a href="#specialties">Clinical Specialties</a></li>
             <li><a href="#hmo-partners">NHIS & HMO Coverage</a></li>
             <li><a href="#testimonials">Patient Testimonials</a></li>
+            <li><a href="https://maps.app.goo.gl/ZCX8c7GsXTRh78TD8" target="_blank" rel="noopener noreferrer" style="color: #60A5FA; font-weight: 600;"><i class="fa-brands fa-google" style="margin-right: 6px;"></i>Review on Google Maps</a></li>
             <li><a href="#faq">Frequently Asked Questions</a></li>
             <li><a href="#hero">24/7 Admissions</a></li>
             <li><a href="#contact">Emergency Protocols</a></li>

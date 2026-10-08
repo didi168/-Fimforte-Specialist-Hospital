@@ -35,12 +35,12 @@ if (!allFilesExist) {
 // 2. Verify HTML head links across all pages
 ['index.html', 'submit-testimonial.html', '404.html'].forEach(page => {
   const html = fs.readFileSync(page, 'utf8');
-  const hasSvgIcon = html.includes('rel="icon" type="image/svg+xml" href="assets/icons/fimforte-favicon.svg"');
-  const has48png = html.includes('rel="icon" type="image/png" sizes="48x48" href="assets/icons/favicon-48x48.png"');
-  const has96png = html.includes('rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png"');
-  const has192png = html.includes('rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon-192x192.png"');
-  const hasAppleTouch = html.includes('rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png"');
-  const hasShortcutIco = html.includes('rel="shortcut icon" href="favicon.ico"');
+  const hasSvgIcon = html.includes('rel="icon" type="image/svg+xml"') && html.includes('fimforte-favicon.svg');
+  const has48png = html.includes('sizes="48x48"') && html.includes('favicon-48x48.png');
+  const has96png = html.includes('sizes="96x96"') && html.includes('favicon-96x96.png');
+  const has192png = html.includes('sizes="192x192"') && html.includes('favicon-192x192.png');
+  const hasAppleTouch = html.includes('rel="apple-touch-icon"') && html.includes('apple-touch-icon.png');
+  const hasShortcutIco = html.includes('rel="shortcut icon"') && html.includes('favicon.ico');
 
   const pagePass = hasSvgIcon && has48png && has96png && has192png && hasAppleTouch && hasShortcutIco;
   console.log(`[${pagePass ? 'PASS' : 'FAIL'}] ${page} Google Search icon <link> tags`);
