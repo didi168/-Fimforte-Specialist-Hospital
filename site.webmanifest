@@ -1,0 +1,31 @@
+{
+  "name": "Fimforte Specialist Hospital Ltd",
+  "short_name": "Fimforte",
+  "description": "24/7 NHIS-accredited multi-specialty hospital in Port Harcourt, Nigeria. Obstetrics & Gynaecology, Fertility Care, Surgery, Paediatrics, and Emergency care.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFCFB",
+  "theme_color": "#FAFCFB",
+  "icons": [
+    {
+      "src": "/assets/icons/fimforte-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "en-NG",
+  "orientation": "portrait"
+}

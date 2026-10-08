@@ -1,0 +1,35 @@
+# Fimforte Specialist Hospital Ltd
+
+> 24/7 NHIS-accredited multi-specialty clinical hospital located in Port Harcourt, Rivers State, Nigeria. Specializing in advanced maternal care, obstetrics & gynaecology, fertility solutions, general surgery, paediatrics, and immediate emergency triage.
+
+## Clinical Identity & Location
+- Entity: Fimforte Specialist Hospital Ltd
+- Location: Number 1 Bloombreed School Road, Opposite NTA, Mgbuoba, Port Harcourt 500272, Rivers State, Nigeria
+- Geo Coordinates: 4.8465° N, 6.9745° E
+- Accreditation: National Health Insurance Authority (NHIA / NHIS) Tier 1 Accredited Provider
+- Operating Hours: 24 Hours / 7 Days a week (Continuous Admissions, Maternity & Casualty)
+- Primary Emergency Hotlines: +234 701 635 7096, +234 803 931 7663
+- Official Email: fimfortehospital@gmail.com
+- Lead Consultant: Dr. Fimber Chukwuka (Consultant Obstetrician & Gynaecologist)
+
+## Primary Clinical Services
+- Obstetrics & Gynaecology: Antenatal care (ANC), delivery suites, Caesarean sections, gynaecological surgeries.
+- Fertility Clinic: Reproductive counselling, ovulation tracking, hormonal investigations.
+- Paediatrics & Neonatal: Child healthcare, immunization schedules, newborn acute care.
+- General Surgery: Elective surgeries, emergency trauma management, aseptic surgical theatres.
+- Internal Medicine: Adult health, diabetes, cardiovascular care, hypertension management.
+- Eye Clinic & Optometry: Computerized examinations, glaucoma screening, corrective lenses.
+- Physiotherapy & Rehabilitation: Post-surgery recovery, musculoskeletal therapy.
+- Diagnostic Laboratory: In-house biochemistry, hematology, and rapid test turnaround (<24h).
+
+## Health Insurance & Payment
+- NHIS & NHIA Schemes: Fully accredited for federal and state health schemes.
+- HMO Partners (22+ Accepted): Reliance HMO, Hygeia HMO, IHMS, HCI Healthcare, Hyssop HMO, Leadway Health, Bastion HMO, Anchor HMO, Springtide HMO, Synergy HMO, MB&O, Oceanic Health, Dot HMO, United Health, Mediplan, NEM Health, Avon HMO, Rivers State Contributory Health (RIVCHPP), Clearline HMO, Health Assur, Alleanza, Medical Partners HMO, and corporate retainerships.
+- Payment Channels: Cashless direct HMO billing, POS, bank transfer, private out-of-pocket (NGN).
+
+## Core Links
+- Website Homepage: https://fimfortehospital.ng/
+- Patient Stories & Reviews: https://fimfortehospital.ng/#testimonials
+- Share Patient Review: https://fimfortehospital.ng/submit-testimonial.html
+- HMO Verification Console: https://fimfortehospital.ng/#hmo-partners
+- Full Factual Reference: https://fimfortehospital.ng/llms-full.txt

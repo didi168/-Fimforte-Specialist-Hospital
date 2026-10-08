@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="og-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061320" />
+      <stop offset="50%" stop-color="#0B2238" />
+      <stop offset="100%" stop-color="#081A2C" />
+    </linearGradient>
+
+    <!-- Teal Glow Gradient -->
+    <radialGradient id="teal-glow" cx="85%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#0F766E" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#0B2238" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Crimson Subtle Ambient Glow -->
+    <radialGradient id="crimson-glow" cx="15%" cy="85%" r="45%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#061320" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+    <filter id="emblem-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="630" fill="url(#og-bg)" />
+  <rect width="1200" height="630" fill="url(#teal-glow)" />
+  <rect width="1200" height="630" fill="url(#crimson-glow)" />
+
+  <!-- Grid Overlay (Subtle Tech / Medical Texture) -->
+  <g opacity="0.05" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="315" x2="1200" y2="315" />
+    <line x1="0" y1="420" x2="1200" y2="420" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="200" y1="0" x2="200" y2="630" />
+    <line x1="400" y1="0" x2="400" y2="630" />
+    <line x1="600" y1="0" x2="600" y2="630" />
+    <line x1="800" y1="0" x2="800" y2="630" />
+    <line x1="1000" y1="0" x2="1000" y2="630" />
+  </g>
+
+  <!-- Top Decorative Accent Bar -->
+  <rect x="0" y="0" width="1200" height="6" fill="#DC2626" />
+
+  <!-- Container Wrapper (Padded 70px) -->
+  <g transform="translate(80, 65)">
+
+    <!-- Top Status Badge Pill -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="455" height="36" rx="18" fill="rgba(15, 118, 110, 0.25)" stroke="#14B8A6" stroke-width="1.2" />
+      <circle cx="18" cy="18" r="5" fill="#10B981" />
+      <text x="32" y="23" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#CCFBF1" letter-spacing="0.5">
+        ACCREDITED NHIS TIER 1 • 24/7 ACTIVE ADMISSIONS
+      </text>
+    </g>
+
+    <!-- Hospital Brand Header (Emblem + Typography) -->
+    <g transform="translate(0, 60)">
+      <!-- White Emblem Tile -->
+      <rect x="0" y="0" width="82" height="82" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#emblem-shadow)" />
+
+      <!-- Authentic Red Caduceus Emblem -->
+      <g transform="translate(20, 12) scale(0.92)">
+        <circle cx="23.5" cy="4" r="4" fill="#DC2626" />
+        <path d="M22.5 7 L24.5 7 L24.5 68 L22.5 68 Z" fill="#DC2626" />
+        <path d="M20.5 67 L26.5 67 L23.5 72 Z" fill="#DC2626" />
+        <path d="M22 13 C 14 7, 2 8, 1 18 C 0 24, 7 28, 12 28 C 17 28, 22 22, 22 22 C 22 22, 16 22, 11 25 C 6 25, 4 21, 5 18 C 6 13, 14 12, 22 15 Z" fill="#DC2626" />
+        <path d="M19 14 C 13 11, 6 12, 4 17 C 7 15, 13 15, 19 18 Z" fill="#EF4444" />
+        <path d="M25 13 C 33 7, 45 8, 46 18 C 47 24, 40 28, 35 28 C 30 28, 25 22, 25 22 C 25 22, 31 22, 36 25 C 41 25, 43 21, 42 18 C 41 13, 33 12, 25 15 Z" fill="#DC2626" />
+        <path d="M28 14 C 34 11, 41 12, 43 17 C 40 15, 34 15, 28 18 Z" fill="#EF4444" />
+        <path d="M23 20 C 13 22, 10 30, 18 36 C 22 39, 25 43, 25 43 C 25 43, 21 37, 16 34 C 11 31, 14 24, 23 23 Z" fill="#B91C1C" />
+        <path d="M24 20 C 34 22, 37 30, 29 36 C 25 39, 22 43, 22 43 C 22 43, 26 37, 31 34 C 36 31, 33 24, 24 23 Z" fill="#DC2626" />
+        <path d="M25 43 C 28 47, 32 52, 29 57 C 26 62, 23 64, 23 64 C 23 64, 26 60, 28 56 C 30 52, 26 48, 23 44 Z" fill="#B91C1C" />
+        <path d="M22 43 C 19 47, 15 52, 18 57 C 21 62, 24 64, 24 64 C 24 64, 21 60, 19 56 C 17 52, 21 48, 24 44 Z" fill="#DC2626" />
+        <path d="M21 21 C 20 20, 21 18, 22.5 19 C 22.5 19.5, 21.8 20.5, 21 21 Z" fill="#991B1B" />
+        <path d="M26 21 C 27 20, 26 18, 24.5 19 C 24.5 19.5, 25.2 20.5, 26 21 Z" fill="#991B1B" />
+      </g>
+
+      <!-- Brand Typography -->
+      <g transform="translate(104, 42)">
+        <text x="0" y="0" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="34" font-weight="900" letter-spacing="2" fill="#FFFFFF">FIMFORTE</text>
+        <text x="0" y="24" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" letter-spacing="3.2" fill="#EF4444">SPECIALIST HOSPITAL LTD.</text>
+      </g>
+    </g>
+
+    <!-- Main Headline -->
+    <g transform="translate(0, 195)">
+      <text x="0" y="52" font-family="'Playfair Display', Georgia, serif" font-size="58" font-weight="700" fill="#FFFFFF">
+        World Class Care Close to <tspan fill="#14B8A6">Home.</tspan>
+      </text>
+      <text x="0" y="104" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#94A3B8">
+        Premier 24-hour multi-specialty hospital in Port Harcourt, Rivers State, Nigeria.
+      </text>
+    </g>
+
+    <!-- Specialties Strip / Highlights -->
+    <g transform="translate(0, 335)">
+      <!-- Pill 1: Maternity -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="220" height="42" rx="10" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+        <text x="20" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">✦ Maternity &amp; Gynae</text>
+      </g>
+      <!-- Pill 2: Fertility -->
+      <g transform="translate(232, 0)">
+        <rect x="0" y="0" width="180" height="42" rx="10" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+        <text x="20" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">✦ Fertility Clinic</text>
+      </g>
+      <!-- Pill 3: Surgery -->
+      <g transform="translate(424, 0)">
+        <rect x="0" y="0" width="180" height="42" rx="10" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+        <text x="20" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">✦ General Surgery</text>
+      </g>
+      <!-- Pill 4: Paediatrics -->
+      <g transform="translate(616, 0)">
+        <rect x="0" y="0" width="170" height="42" rx="10" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+        <text x="20" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">✦ Paediatrics</text>
+      </g>
+      <!-- Pill 5: 40+ HMOs -->
+      <g transform="translate(798, 0)">
+        <rect x="0" y="0" width="242" height="42" rx="10" fill="rgba(20, 184, 166, 0.18)" stroke="#14B8A6" stroke-width="1.2" />
+        <text x="20" y="26" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#2DD4BF">✦ 40+ HMOs Accepted</text>
+      </g>
+    </g>
+
+    <!-- Bottom Footer Row: Address, Emergency Call & URL -->
+    <g transform="translate(0, 420)">
+      <line x1="0" y1="0" x2="1040" y2="0" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1" />
+
+      <!-- Left: Physical Location -->
+      <g transform="translate(0, 24)">
+        <text x="0" y="16" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">
+          Opposite NTA, Mgbuoba, Port Harcourt
+        </text>
+        <text x="0" y="36" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#94A3B8">
+          Number 1 Bloombreed School Road, Rivers State
+        </text>
+      </g>
+
+      <!-- Center: 24/7 Emergency Triage Hotlines -->
+      <g transform="translate(430, 24)">
+        <text x="0" y="16" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#DC2626">
+          24/7 Emergency Triage &amp; Enquiries:
+        </text>
+        <text x="0" y="36" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF">
+          0701 635 7096 • 0803 931 7663
+        </text>
+      </g>
+
+      <!-- Right: Website URL Badge -->
+      <g transform="translate(850, 24)">
+        <rect x="0" y="0" width="190" height="42" rx="8" fill="#FFFFFF" />
+        <text x="95" y="26" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="14" font-weight="800" fill="#0B2238">
+          fimfortehospital.ng
+        </text>
+      </g>
+    </g>
+
+  </g>
+</svg>

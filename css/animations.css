@@ -1,0 +1,586 @@
+/* ==========================================================================
+   FIMFORTE SPECIALIST HOSPITAL — MASTER MOTION DESIGN SYSTEM
+   Apple / Stripe-Level Craft: Hardware-Accelerated 60fps CSS Transitions
+   ========================================================================== */
+
+:root {
+  /* Motion Duration Tokens */
+  --motion-dur-instant: 120ms;
+  --motion-dur-fast:    240ms;
+  --motion-dur-normal:  500ms;
+  --motion-dur-slow:    750ms;
+  --motion-dur-ambient: 14000ms;
+
+  /* Motion Easing Tokens */
+  --motion-ease-out:    cubic-bezier(0.16, 1, 0.3, 1);       /* Decisive entrance */
+  --motion-ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);    /* Tactile pop */
+  --motion-ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);      /* Apple smooth curve */
+  --motion-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);      /* Ambient cycles */
+
+  /* Distance Tokens */
+  --motion-offset-sm: 8px;
+  --motion-offset-md: 24px;
+  --motion-offset-lg: 38px;
+}
+
+/* ==========================================================================
+   1. HERO ENTRANCE CASCADE (Page Load Stagger)
+   ========================================================================== */
+@keyframes heroEntranceFadeUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-offset-md), 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroVisualScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.96, 0.96, 1) translate3d(0, var(--motion-offset-md), 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroGlowAura {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.42;
+  }
+  50% {
+    transform: translate3d(-18px, 14px, 0) scale(1.08);
+    opacity: 0.62;
+  }
+}
+
+.hero-glow-blob {
+  animation: heroGlowAura var(--motion-dur-ambient) var(--motion-ease-in-out) infinite;
+  will-change: transform, opacity;
+}
+
+/* Scoped Hero Entrance Animations (Only triggered when JS loads) */
+html.js .hero-badge-pill {
+  animation: heroEntranceFadeUp var(--motion-dur-normal) var(--motion-ease-smooth) 80ms both;
+}
+
+html.js .hero-title {
+  animation: heroEntranceFadeUp var(--motion-dur-slow) var(--motion-ease-smooth) 180ms both;
+}
+
+html.js .hero-description {
+  animation: heroEntranceFadeUp var(--motion-dur-slow) var(--motion-ease-smooth) 280ms both;
+}
+
+html.js .hero-actions {
+  animation: heroEntranceFadeUp var(--motion-dur-normal) var(--motion-ease-spring) 380ms both;
+}
+
+html.js .hero-visual-wrapper {
+  animation: heroVisualScaleIn var(--motion-dur-slow) var(--motion-ease-smooth) 200ms both;
+}
+
+html.js .widget-hero-hmo {
+  animation: heroEntranceFadeUp var(--motion-dur-normal) var(--motion-ease-smooth) 440ms both;
+}
+
+/* ==========================================================================
+   2. SCROLL REVEAL SYSTEM (IntersectionObserver)
+   Zero CLS: Elements reserve exact space; transform & opacity only
+   ========================================================================== */
+/* Dynamic Interactive Grids are ALWAYS visible (Zero blocking) */
+.hmo-cards-grid,
+.reviews-grid {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+html.js .reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, var(--motion-offset-md), 0);
+  transition: opacity var(--motion-dur-normal) var(--motion-ease-smooth),
+              transform var(--motion-dur-normal) var(--motion-ease-smooth);
+  will-change: opacity, transform;
+}
+
+html.js .reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+/* ==========================================================================
+   2.1. LUXURY CLINICAL PRELOADER SCREEN (3-Second Timed Experience)
+   ========================================================================== */
+/* ==========================================================================
+   2.1. LUXURY CLINICAL PRELOADER SCREEN (Website Light Theme — 3s)
+   ========================================================================== */
+.page-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 999999;
+  background: radial-gradient(circle at 50% 35%, #E6F5F0 0%, #FAFCFB 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 36px);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.55s ease;
+  user-select: none;
+}
+
+.page-preloader.fade-out {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.page-preloader.navigating {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Minimalist Unboxed Container (Clean & Open responsive layout) */
+.preloader-card,
+.preloader-content {
+  width: 100%;
+  max-width: min(1120px, 94vw);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 0;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-brand-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(24px, 4.5vh, 42px);
+}
+
+/* Big Responsive Brand Logo Filling the Screen Responsively */
+.preloader-logo-img {
+  width: 100%;
+  max-width: clamp(290px, 84vw, 920px);
+  height: auto;
+  aspect-ratio: 380 / 68;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 18px rgba(11, 34, 56, 0.07));
+  display: block;
+  margin: 0 auto;
+  animation: preloaderLogoBreathe 2.8s ease-in-out infinite;
+}
+
+@keyframes preloaderLogoBreathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.98;
+  }
+  50% {
+    transform: scale(1.025);
+    opacity: 1;
+  }
+}
+
+.preloader-status-text {
+  font-size: clamp(0.98rem, 2.2vw, 1.25rem);
+  font-weight: 700;
+  color: var(--brand-navy-900);
+  margin-bottom: 20px;
+  min-height: 28px;
+  letter-spacing: -0.015em;
+  transition: opacity 0.25s ease;
+}
+
+.preloader-bar-track {
+  width: 100%;
+  max-width: clamp(340px, 50vw, 540px);
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.preloader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0F766E 0%, #0D9488 60%, #10B981 100%);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 1px 8px rgba(13, 148, 136, 0.4);
+  transition: width 0.08s linear;
+}
+
+/* Responsive Arrangement for Elements Under Progress Bar */
+.preloader-meta {
+  width: 100%;
+  max-width: clamp(340px, 50vw, 540px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: clamp(0.82rem, 1.8vw, 0.95rem);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.preloader-percent {
+  font-weight: 800;
+  color: var(--brand-teal-700);
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.preloader-caption {
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+
+/* Mobile & Tablet Portrait: Responsive Centered Stack Under Bar */
+@media (max-width: 580px) {
+  .preloader-bar-track {
+    max-width: min(88vw, 360px);
+    margin-bottom: 10px;
+  }
+
+  .preloader-meta {
+    max-width: min(90vw, 360px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .preloader-percent {
+    font-size: clamp(1.12rem, 4.2vw, 1.25rem);
+    color: var(--brand-teal-700);
+    letter-spacing: -0.015em;
+  }
+
+  .preloader-caption {
+    font-size: clamp(0.78rem, 2.8vw, 0.88rem);
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 320px;
+  }
+}
+
+/* Ultra-Compact Screens (e.g. 320px iPhone SE) */
+@media (max-width: 360px) {
+  .page-preloader {
+    padding: 12px;
+  }
+  .preloader-logo-img {
+    max-width: 96vw;
+  }
+  .preloader-bar-track {
+    max-width: 92vw;
+  }
+  .preloader-meta {
+    max-width: 92vw;
+    gap: 4px;
+  }
+  .preloader-percent {
+    font-size: 1.05rem;
+  }
+  .preloader-caption {
+    font-size: 0.74rem;
+    line-height: 1.35;
+  }
+}
+
+/* Ultra-Wide and 4K Responsive Scale */
+@media (min-width: 2560px) {
+  .preloader-card,
+  .preloader-content {
+    max-width: 1400px;
+  }
+  .preloader-logo-img {
+    max-width: 1180px;
+  }
+  .preloader-bar-track,
+  .preloader-meta {
+    max-width: 680px;
+  }
+  .preloader-bar-track {
+    height: 10px;
+  }
+  .preloader-status-text {
+    font-size: 1.5rem;
+  }
+  .preloader-meta {
+    font-size: 1.1rem;
+  }
+}
+html.js .reveal-stagger > *:nth-child(6) { transition-delay: 290ms; }
+html.js .reveal-stagger > *:nth-child(7) { transition-delay: 340ms; }
+html.js .reveal-stagger > *:nth-child(8) { transition-delay: 390ms; }
+
+/* Scale Reveal for visual features */
+html.js .reveal-scale {
+  opacity: 0;
+  transform: scale3d(0.95, 0.95, 1) translate3d(0, 16px, 0);
+  transition: opacity var(--motion-dur-slow) var(--motion-ease-smooth),
+              transform var(--motion-dur-slow) var(--motion-ease-smooth);
+  will-change: opacity, transform;
+}
+
+html.js .reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+/* ==========================================================================
+   3. MICRO-INTERACTIONS & TACTILE STATES
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) {
+  /* Specialty, Doctor & Review Card Gentle Elevation */
+  .specialty-card,
+  .doctor-card,
+  .review-card,
+  .hmo-card,
+  .faq-item {
+    transition: transform var(--motion-dur-fast) var(--motion-ease-smooth),
+                box-shadow var(--motion-dur-fast) var(--motion-ease-smooth),
+                border-color var(--motion-dur-fast) var(--motion-ease-smooth);
+  }
+
+  .specialty-card:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: 0 16px 32px -8px rgba(11, 34, 56, 0.12);
+  }
+
+  .doctor-card:hover {
+    transform: translate3d(0, -6px, 0);
+    box-shadow: 0 20px 40px -10px rgba(11, 34, 56, 0.14);
+  }
+
+  .review-card:hover {
+    transform: translate3d(0, -4px, 0);
+    box-shadow: 0 14px 28px -6px rgba(15, 118, 110, 0.1);
+  }
+
+  /* Button Hover Magnetic Micro-Lift */
+  .btn:hover,
+  .btn-nav-outline:hover {
+    transform: translate3d(0, -2px, 0);
+  }
+
+  /* Subtle Icon Movement on Hover */
+  .btn:hover i.fa-arrow-right,
+  .btn:hover i.fa-calendar-check {
+    transform: translate3d(3px, 0, 0);
+    transition: transform var(--motion-dur-fast) var(--motion-ease-spring);
+  }
+}
+
+/* Active Press for All Interactive Elements */
+.btn:active,
+.btn-nav-outline:active,
+.btn-emergency-pill:active,
+.mobile-toggle:active,
+.scroll-to-top-btn:active {
+  transform: scale(0.97) !important;
+  transition: transform 90ms ease-out !important;
+}
+
+/* Sticky Navbar Hide on Scroll Down, Show on Scroll Up */
+.site-header {
+  transition: transform var(--motion-dur-normal) var(--motion-ease-out),
+              background var(--motion-dur-fast) ease,
+              box-shadow var(--motion-dur-fast) ease,
+              padding var(--motion-dur-fast) ease;
+}
+
+.site-header.nav-hidden {
+  transform: translate3d(0, -100%, 0);
+}
+
+.site-header.nav-visible {
+  transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   4. FLOATING SCROLL-TO-TOP BUTTON (ALL PAGES)
+   With Circular SVG Scroll Progress Indicator
+   ========================================================================== */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: max(24px, env(safe-area-inset-bottom, 24px));
+  right: max(24px, env(safe-area-inset-right, 24px));
+  width: 48px;
+  height: 48px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  background: var(--brand-navy-900);
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  z-index: 990;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -4px rgba(11, 34, 56, 0.35),
+              0 2px 8px rgba(15, 118, 110, 0.15);
+  
+  /* Initial Hidden State */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate3d(0, 16px, 0) scale(0.85);
+  transition: opacity var(--motion-dur-fast) var(--motion-ease-smooth),
+              transform var(--motion-dur-fast) var(--motion-ease-spring),
+              visibility var(--motion-dur-fast) var(--motion-ease-smooth),
+              background var(--motion-dur-fast) ease,
+              box-shadow var(--motion-dur-fast) ease;
+}
+
+.scroll-to-top-btn.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.scroll-to-top-btn:focus-visible {
+  outline: 3px solid var(--brand-teal-500);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .scroll-to-top-btn:hover {
+    background: var(--brand-navy-800);
+    transform: translate3d(0, -3px, 0) scale(1.06);
+    box-shadow: 0 16px 32px -4px rgba(11, 34, 56, 0.45),
+                0 4px 12px rgba(15, 118, 110, 0.25);
+  }
+
+  .scroll-to-top-btn:hover .scroll-top-arrow {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+/* SVG Circular Progress Track */
+.scroll-progress-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.scroll-progress-track {
+  stroke: rgba(255, 255, 255, 0.16);
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.scroll-progress-bar {
+  stroke: var(--brand-teal-500);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 90ms linear;
+}
+
+.scroll-top-arrow {
+  position: relative;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--motion-dur-fast) var(--motion-ease-spring);
+}
+
+/* Small Screens / Notched Devices Adjustments */
+@media (max-width: 580px) {
+  .scroll-to-top-btn {
+    bottom: max(16px, env(safe-area-inset-bottom, 16px));
+    right: max(16px, env(safe-area-inset-right, 16px));
+    width: 44px;
+    height: 44px;
+  }
+  .scroll-top-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* ==========================================================================
+   5. STATS NUMBER COUNTER (Visual Accent)
+   ========================================================================== */
+.metric-value.counting {
+  transition: color var(--motion-dur-fast) ease;
+}
+
+/* ==========================================================================
+   6. ACCESSIBILITY: STRICT PREFERS-REDUCED-MOTION OVERRIDE
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html.js .reveal-on-scroll,
+  html.js .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .scroll-to-top-btn {
+    transition: opacity 120ms ease !important;
+    transform: none !important;
+  }
+
+  .scroll-to-top-btn.is-active {
+    transform: none !important;
+  }
+
+  .hero-glow-blob {
+    animation: none !important;
+  }
+}

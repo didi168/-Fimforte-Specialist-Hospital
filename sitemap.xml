@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage: Fimforte Specialist Hospital Ltd -->
+  <url>
+    <loc>https://fimfortehospital.ng/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-NG" href="https://fimfortehospital.ng/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fimfortehospital.ng/" />
+    <image:image>
+      <image:loc>https://fimfortehospital.ng/assets/images/hero-doctor.jpg</image:loc>
+      <image:title>Fimforte Specialist Hospital Consultant Doctor in Port Harcourt</image:title>
+      <image:caption>Modern clinical healthcare specialist at Fimforte Specialist Hospital Port Harcourt</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fimfortehospital.ng/assets/images/og-preview.svg</image:loc>
+      <image:title>Fimforte Specialist Hospital Social Preview Graphic</image:title>
+      <image:caption>High-resolution brand preview for Fimforte Specialist Hospital Port Harcourt</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fimfortehospital.ng/assets/images/og-preview.jpg</image:loc>
+      <image:title>Fimforte Specialist Hospital Medical Team and Modern Clinic</image:title>
+      <image:caption>World-class healthcare close to home in Mgbuoba, Port Harcourt</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://fimfortehospital.ng/assets/icons/fimforte-logo.svg</image:loc>
+      <image:title>Fimforte Specialist Hospital Official Emblem</image:title>
+    </image:image>
+  </url>
+
+  <!-- Patient Testimonial & Recovery Stories Submission Page -->
+  <url>
+    <loc>https://fimfortehospital.ng/submit-testimonial.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-NG" href="https://fimfortehospital.ng/submit-testimonial.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fimfortehospital.ng/submit-testimonial.html" />
+  </url>
+</urlset>
